@@ -24,11 +24,11 @@ for (var data in student) {
         `
             <div id="scheda">
                 
-                <h3>${student.firstName}</h3>
+                <h3>${"Nome" + " " + ":" + " " + student.firstName}</h3>
         
-                <h3>${student.lastName}</h3>
+                <h3>${"Cognome" + " " + ":" + " " +student.lastName}</h3>
             
-                <h3>${student.age}</h3>
+                <h3>${"Età" + " " + ":" + " " +student.age}</h3>
 
             </div>
             
@@ -43,22 +43,47 @@ for (var data in student) {
 var students = [
     
     {
-        name: "Zack",
-        lastName: "de la Rocha",
-        age: 50
+        ArtistFirstName: "Zack",
+        ArtistLastName: "de la Rocha",
+        ArtistAge: 50
         
     },
     
     {
-        name: "Peter",
-        lastName: "Gabriel",
-        age: 70
+        ArtistFirstName: "Peter",
+        ArtistLastName: "Gabriel",
+        ArtistAge: 70
     },
     
-    {   name: "Chino",
-        lastName: "Moreno",
-        age: 47
+    {   ArtistFirstName: "Chino",
+        ArtistLastName: "Moreno",
+        ArtistAge: 47
         
     }
    
 ]
+
+// Creo un ciclo per gli oggetti contenuti nell'array per poi stamparli nel documento di markup.
+
+for (var musicArtist in students) {
+    
+    var ArtistN = students[musicArtist].ArtistFirstName;
+    var ArtistLN = students[musicArtist].ArtistLastName;
+    var ArtistA = students[musicArtist].ArtistAge;
+    
+    var test = 
+    `   
+        <h3>${"Nome" + " " + ":" + " " + ArtistN},</h3>
+            
+        <h3>${"Cognome" + " " + ":" + " " + ArtistLN},</h3>
+
+        <h3>${"Età" + " " + ":" + " " + ArtistA}</h3>
+        
+        `
+    document.getElementById('artists').insertAdjacentHTML('beforeend', test )
+
+
+}
+    
+
+
