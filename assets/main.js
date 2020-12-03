@@ -37,3 +37,28 @@ for (var data in student) {
     document.getElementById('scheda').innerHTML = ('beforeend', data );
 
 }
+
+// Creo un array contenente oggetti di studenti
+
+var students = [
+    
+    {
+        name: "Zack",
+        lastName: "de la Rocha",
+        age: 50
+        
+    },
+    
+    {
+        name: "Peter",
+        lastName: "Gabriel",
+        age: 70
+    },
+    
+    {   name: "Chino",
+        lastName: "Moreno",
+        age: 47
+        
+    }
+   
+]
