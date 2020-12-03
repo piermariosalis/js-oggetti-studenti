@@ -38,8 +38,15 @@ for (var data in student) {
 
 }
 
-// Creo un array contenente oggetti di studenti
 
+// Creo variabili per definire tre prompt coi quali dare la possibilità all'utente di aggiungere un nuovo oggetto "studente" all'array "students"
+
+    var promptOne = prompt("Inserisci nome");
+    var promptTwo = prompt("Inserisci cognome");
+    var promptThree = prompt("Inserisci l'età");
+    var numAge = parseInt(promptThree);
+
+// Creo un array contenente oggetti di studenti
 var students = [
     
     {
@@ -57,13 +64,20 @@ var students = [
     
     {   ArtistFirstName: "Chino",
         ArtistLastName: "Moreno",
-        ArtistAge: 47
+        ArtistAge: 47,
         
+    },
+    
+    {
+        ArtistFirstName: promptOne,
+        ArtistLastName: promptTwo,
+        ArtistAge: numAge
     }
    
 ]
 
 // Creo un ciclo per gli oggetti contenuti nell'array per poi stamparli nel documento di markup.
+
 
 for (var musicArtist in students) {
     
@@ -79,11 +93,14 @@ for (var musicArtist in students) {
 
         <h3>${"Età" + " " + ":" + " " + ArtistA}</h3>
         
+    
         `
     document.getElementById('artists').insertAdjacentHTML('beforeend', test )
 
 
 }
+
+
     
 
 
